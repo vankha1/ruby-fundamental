@@ -1,9 +1,9 @@
 class Person
     @@count = 0
     def initialize(name, age)
-    @@count += 1
-      @name = name
-      @age = age
+        @@count += 1
+        @name = name
+        @age = age
     end
 
     def name
@@ -50,7 +50,6 @@ a = Person.new('Van Kha', 21)
 puts a.name
 a.introduce
 Person.total_count
-a.handleError
 
 # length of person array
 num = 20
@@ -128,11 +127,13 @@ for i in 0...people.length do
     people[i].age += 1
 end
 
-
+# Without using loop, using built-in
+# each function
 people.each do |person|
     person.age += 1
 end
 
+# map function
 arr_map = people.map { |person| person.age += 1 }
 
 # No loop -> get all person's age
@@ -149,3 +150,6 @@ people_2 = num2.times.map { |i| Person.new("Person#{i + 21}", rand(10..90))}
 concat_array = people + people_2
 puts "----- Concat array ------"
 printPersonArray(concat_array)
+
+# Exception 
+a.handleError
